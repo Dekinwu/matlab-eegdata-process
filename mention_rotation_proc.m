@@ -3,9 +3,9 @@
 %使用该脚本时，请正确的输入原始数据所在目录和处理后的数据保存的目录。
 
 % 心理旋转实验数据所在目录
-path='C:\Users\wzh\Desktop\behaviordata\RT_time';
+path='F:\课题\CES实验数据及处理\实验数据\CES行为学\RT_time\sham';
 % 处理后数据保存目录
-savepath='C:\Users\wzh\Desktop\behaviordata\rt_matlab_result\';
+savepath='F:\课题\CES实验数据及处理\实验数据\CES行为学\rt_matlab_result\sham\';
 Subjects_num=4;   %被试的个数
 groups_num=8;  %每个被试做的组数
 times_per_group=96;
@@ -61,7 +61,7 @@ for iCount = 1:LengthFiles    % 判断是否是文件夹
    correctavg(subj_count,:)=mean(tcorrect,1);
    latencyavg(subj_count,:)=mean(tlatency,1);    
   end
-%  计算每组correct和latency均值    
+%  计算每组correct和latency均值。   
 correctavgfilename=['correctavg_of_all_subjs' '.mat'];
 save([savepath,correctavgfilename],'correctavg');
 latencyavgfilename=['latencyavg_of_all_subjs' '.mat'];
