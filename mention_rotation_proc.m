@@ -6,7 +6,7 @@
 path='F:\课题\CES实验数据及处理\实验数据\CES行为学\RT_time\sham';
 % 处理后数据保存目录
 savepath='F:\课题\CES实验数据及处理\实验数据\CES行为学\rt_matlab_result\sham\';
-Subjects_num=4;   %被试的个数
+Subjects_num=10;   %被试的个数
 groups_num=8;  %每个被试做的组数
 times_per_group=96;
 
@@ -19,7 +19,8 @@ latencyavg=zeros(Subjects_num,groups_num);
 correct_per_subj=zeros(groups_num,times_per_group);
 latency_per_subj=zeros(groups_num,times_per_group);
 
-Files = dir(fullfile( path,'*.*'));
+% Files = dir(fullfile( path,'*.*'));
+Files = dir(fullfile( path));
 LengthFiles = length(Files);
 
 subj_count=0;
